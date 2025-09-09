@@ -19,7 +19,20 @@
     <script>
         
         // add code here
+        const selectItem = document.getElementById("select_item");
+        const shopList = document.getElementById("shopList");
         
+        selectItem.addEventListener("change", function() {
+            const selectedValue = this.value;
+            const selectedText = this.options[this.selectedIndex].text;
+            
+            // Create new list item
+            const listItem = document.createElement("li");
+            listItem.textContent = selectedText;
+            
+            // Add to shopping cart
+            shopList.appendChild(listItem);
+        });
         
     </script>
 
